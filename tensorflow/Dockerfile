@@ -1,4 +1,4 @@
-#VERSION       1.0
+#VERSION       0.9
 FROM shuxin/cuda
 MAINTAINER <shuxin>  
 
