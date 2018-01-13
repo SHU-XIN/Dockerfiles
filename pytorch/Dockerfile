@@ -3,7 +3,6 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 # Install git, wget and other dependencies
 RUN apt-get update && apt-get install -y python-pip
 RUN apt-get install -y python3-pip
-RUN pip3 install --upgrade pip3
 RUN pip install --upgrade pip
 RUN apt-get update && apt-get install -y \
   git \
