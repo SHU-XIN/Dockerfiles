@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:8.0-cudnn7-devel-ubuntu16.04
 
 # Install git, wget and other dependencies
 RUN apt-get update && apt-get install -y python-pip
@@ -19,7 +19,7 @@ RUN pip install \
   matplotlib
 RUN pip install -U scikit-image
 
-RUN pip3 install http://download.pytorch.org/whl/cu90/torch-0.3.0.post4-cp35-cp35m-linux_x86_64.whl \
+RUN pip3 install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp35-cp35m-linux_x86_64 \
   torchvision \
   git+https://github.com/pytorch/tnt.git@master
 
