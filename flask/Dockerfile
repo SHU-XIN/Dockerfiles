@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
   wget \
   mysql-server \
   mysql-client \
-  libmysqlclient-dev
+  libmysqlclient-dev \
+  nginx
 
 RUN pip install \
   ipython \
@@ -26,8 +27,7 @@ RUN pip install \
   flask-login \
   flask-bootstrap \
   flask_restful \
-  uwsgi \
-  nginx
+  uwsgi
   
 
 RUN pip install -U scikit-image
