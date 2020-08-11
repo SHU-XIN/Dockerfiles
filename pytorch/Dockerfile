@@ -17,10 +17,12 @@ RUN pip3 install \
   jupyter \
   numpy \
   scipy \
+  opencv-python \
+  scikit-learn \
   matplotlib
 RUN pip3 install -U scikit-image
 
-RUN pip3 install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip3 install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 
 EXPOSE 8888
 WORKDIR /root/workspace
