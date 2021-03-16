@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:10.1-devel-ubuntu14.04
 
 # Install git, wget and other dependencies
 RUN apt-get update && apt-get install -y python-pip
@@ -22,7 +22,7 @@ RUN pip3 install \
   matplotlib
 RUN pip3 install -U scikit-image
 
-RUN pip3 install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip3 install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 
 EXPOSE 8888
 WORKDIR /root/workspace
